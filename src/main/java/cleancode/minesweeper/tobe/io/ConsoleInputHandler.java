@@ -13,6 +13,15 @@ public class ConsoleInputHandler implements InputHandler {
     private final BoardIndexConverter boardIndexConverter = new BoardIndexConverter();
 
     @Override
+    public CellPosition getCellPositionFromUser() {
+        String userInput = SCANNER.nextLine();
+
+        int rowIndex = boardIndexConverter.getSelectedRowIndex(userInput);
+        int colIndex = boardIndexConverter.getSelectedColIndex(userInput);
+        return CellPosition.of(rowIndex, colIndex);
+    }
+
+    @Override
     public UserAction getUserActionFromUser() {
         String userInput = SCANNER.nextLine();
 
@@ -24,14 +33,5 @@ public class ConsoleInputHandler implements InputHandler {
         }
 
         return UserAction.UNKNOWN;
-    }
-
-    @Override
-    public CellPosition getCellPositionFromUser() {
-        String userInput = SCANNER.nextLine();
-
-        int colIndex = boardIndexConverter.getSelectedColIndex(userInput);
-        int rowIndex = boardIndexConverter.getSelectedRowIndex(userInput);
-        return CellPosition.of(rowIndex, colIndex);
     }
 }
