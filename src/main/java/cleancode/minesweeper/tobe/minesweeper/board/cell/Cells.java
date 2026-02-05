@@ -32,4 +32,10 @@ public class Cells {
                 .filter(Cell::isFlagged)
                 .count();
     }
+
+    public void openEveryLandMines() {
+        cells.stream()
+                .filter(Cell::isLandMine)
+                .forEach(Cell::open);
+    }
 }

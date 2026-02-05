@@ -56,6 +56,11 @@ public class GameBoard {
         checkIfGameIsOver();
     }
 
+    public void revealEveryLandMine() {
+        Cells cells = Cells.from(board);
+        cells.openEveryLandMines();
+    }
+
     public boolean isInvalidCellPosition(CellPosition cellPosition) {
         int rowSize = getRowSize();
         int colSize = getColSize();

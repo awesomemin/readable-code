@@ -45,13 +45,14 @@ public class Minesweeper implements GameInitializable, GameRunnable {
             }
         }
 
-        outputHandler.showBoard(gameBoard);
-
         if (gameBoard.isWinStatus()) {
+            outputHandler.showBoard(gameBoard);
             outputHandler.showGameWinningComment();
         }
 
         if (gameBoard.isLoseStatus()) {
+            gameBoard.revealEveryLandMine();
+            outputHandler.showBoard(gameBoard);
             outputHandler.showGameLosingComment();
         }
     }
