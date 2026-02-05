@@ -17,6 +17,8 @@ public interface OutputHandler {
 
     void showCommentForUserAction();
 
+    void showRemainingLandMineCount(int landMineCount);
+
     void showExceptionMessage(GameException e);
 
     void showSimpleMessage(String message);

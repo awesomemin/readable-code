@@ -47,6 +47,7 @@ public class ConsoleOutputHandler implements OutputHandler {
             }
             System.out.println();
         }
+        showRemainingLandMineCount(board.getRemainingLandMineCount());
         System.out.println();
     }
 
@@ -68,6 +69,11 @@ public class ConsoleOutputHandler implements OutputHandler {
     @Override
     public void showCommentForUserAction() {
         System.out.println("선택한 셀에 대한 행위를 선택하세요. (1: 오픈, 2: 깃발 꽂기)");
+    }
+
+    @Override
+    public void showRemainingLandMineCount(int landMineCount) {
+        System.out.printf("남은 지뢰는 %d개입니다.", landMineCount);
     }
 
     @Override

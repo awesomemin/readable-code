@@ -26,4 +26,10 @@ public class Cells {
         return cells.stream()
                 .allMatch(Cell::isChecked);
     }
+
+    public int getFlagCount() {
+        return (int) cells.stream()
+                .filter(Cell::isFlagged)
+                .count();
+    }
 }

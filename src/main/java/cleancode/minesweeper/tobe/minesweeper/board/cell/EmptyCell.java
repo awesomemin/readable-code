@@ -45,4 +45,9 @@ public class EmptyCell implements Cell {
         return cellState.isOpened();
     }
 
+    @Override
+    public boolean isFlagged() {
+        return cellState.isFlagged();
+    }
+
 }

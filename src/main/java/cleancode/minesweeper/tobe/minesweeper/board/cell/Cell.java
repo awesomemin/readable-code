@@ -15,4 +15,6 @@ public interface Cell {
     boolean isChecked();
 
     boolean isOpened();
+
+    boolean isFlagged();
 }

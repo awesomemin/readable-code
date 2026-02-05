@@ -76,6 +76,15 @@ public class GameBoard {
         return gameStatus == GameStatus.LOSE;
     }
 
+    public int getRemainingLandMineCount() {
+        int flagCount = getFlagCount();
+        return landMineCount - flagCount;
+    }
+
+    private int getFlagCount() {
+        return Cells.from(board).getFlagCount();
+    }
+
     public CellSnapshot getSnapshot(CellPosition cellPosition) {
         Cell cell = findCell(cellPosition);
         return cell.getSnapshot();

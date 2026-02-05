@@ -2,7 +2,6 @@ package cleancode.minesweeper.tobe.minesweeper.board.cell;
 
 public class LandMineCell implements Cell {
 
-
     private final CellState cellState = CellState.initialize();
 
     @Override
@@ -44,6 +43,11 @@ public class LandMineCell implements Cell {
     @Override
     public boolean isOpened() {
         return cellState.isOpened();
+    }
+
+    @Override
+    public boolean isFlagged() {
+        return cellState.isFlagged();
     }
 
 }

@@ -51,5 +51,10 @@ public class NumberCell implements Cell {
         return cellState.isOpened();
     }
 
+    @Override
+    public boolean isFlagged() {
+        return cellState.isFlagged();
+    }
+
 
 }
