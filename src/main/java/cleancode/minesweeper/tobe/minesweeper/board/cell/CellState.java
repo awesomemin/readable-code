@@ -14,8 +14,8 @@ public class CellState {
         return new CellState(false, false);
     }
 
-    public void flag() {
-        this.isFlagged = true;
+    public void toggleFlag() {
+        this.isFlagged = !this.isFlagged;
     }
 
     public void open() {

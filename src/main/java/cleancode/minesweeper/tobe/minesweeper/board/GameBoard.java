@@ -52,7 +52,7 @@ public class GameBoard {
 
     public void flagAt(CellPosition cellPosition) {
         Cell cell = findCell(cellPosition);
-        cell.flag();
+        cell.toggleFlag();
         checkIfGameIsOver();
     }
 

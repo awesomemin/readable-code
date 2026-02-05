@@ -26,8 +26,8 @@ public class EmptyCell implements Cell {
     }
 
     @Override
-    public void flag() {
-        cellState.flag();
+    public void toggleFlag() {
+        cellState.toggleFlag();
     }
 
     @Override
